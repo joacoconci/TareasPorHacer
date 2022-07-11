@@ -1,5 +1,8 @@
 import colors from 'colors';
 import { inquirerMenu, pausa } from './helpers/inquirer.js';
+
+import { Tareas } from './models/tareas.js';
+
 console.clear();
 
 const main = async () => {
@@ -9,6 +12,7 @@ const main = async () => {
     //Hago un 'await' por que mostrarMenu devuelve una promesa
     opt = await inquirerMenu();
     console.log({ opt });
+
     if (opt !== '0') await pausa();
   } while (opt !== '0');
 
